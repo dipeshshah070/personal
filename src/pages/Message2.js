@@ -7,7 +7,7 @@ function Message2() {
       <h1>Forever and Always ❤️</h1>
       <p>No matter what happens, I will always be by your side. You are my everything.
         <p>My cutie Patotieeeee.</p>
-        <p>I love You soo muchhh</p>
+        <p>I Love You Soo Muchhh</p>
         <p>❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
         ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
         ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️

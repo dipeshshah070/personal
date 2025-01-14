@@ -52,7 +52,7 @@ function MusicPlayer() {
 
   return (
     <div className="music-player">
-      <h2>Enjoy Our Song 🎵</h2>
+      <h2>🎵</h2>
       <button onClick={togglePlay} className="music-button">
         {isPlaying ? "Pause" : "Play"} Song
       </button>

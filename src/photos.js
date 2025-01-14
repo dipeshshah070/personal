@@ -27,6 +27,7 @@ function PhotoSlideshow() {
   return (
     <div className="slideshow">
       <h1>Our Memories Together 💖</h1>
+      <p>I Love you Soo Muchh💖💖💖</p>
       <Slider {...settings}>
         <div>
           <img src={img1} alt="Memory 1" />
@@ -61,7 +62,6 @@ function PhotoSlideshow() {
       </Slider>
       <p></p>
       <Link to="/videos" className="button">Videossssssss</Link>
-      <p> If you are bored sliding you can play the song</p>
     </div>
   );
 }
