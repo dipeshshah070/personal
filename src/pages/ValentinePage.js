@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import MusicPlayer from "./MusicPlayer"; // Importing the MusicPlayer component
 
 function ValentinePage() {
   const [scale, setScale] = useState(0.5);
@@ -27,11 +28,19 @@ function ValentinePage() {
       }}
     >
       <h1>Will You Be My Valentine? ❤️</h1>
-      <img src = "https://media4.giphy.com/media/quvIXSlkzFQq5Bx6LZ/200.webp?cid=790b7611b73e1bdk89eo6dyzp79zxub75grl9eemptm7kbrk&ep=v1_gifs_search&rid=200.webp&ct=g" alt="bemine" />
+      <img 
+        src="https://media4.giphy.com/media/quvIXSlkzFQq5Bx6LZ/200.webp?cid=790b7611b73e1bdk89eo6dyzp79zxub75grl9eemptm7kbrk&ep=v1_gifs_search&rid=200.webp&ct=g" 
+        alt="bemine" 
+      />
+
+      {/* Adding the MusicPlayer component */}
+      <div className="music-container">
+        <MusicPlayer />
+      </div>
 
       <div className="button-container">
         <button className="valentine-button yes-button" onClick={handleYes}>Yes 💕💕</button>
-        <button className="valentine-button no-button" onClick={handleNo}>Ofcourse💕💕</button>
+        <button className="valentine-button no-button" onClick={handleNo}>Of course 💕💕</button>
       </div>
     </div>
   );

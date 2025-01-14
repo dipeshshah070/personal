@@ -69,7 +69,7 @@ function VideoGallery() {
         </div>
       </Slider>
       <p>    </p>
-      <p>Now For The Best Part. Please click on the Next Button Baby❤️</p>
+      <p>Now For The Best Part. Please click On The Button Baby❤️</p>
       <Link to="/valentine" className="button">EXCITEDDD!!!</Link>
     </div>
   );
