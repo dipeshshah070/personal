@@ -9,7 +9,7 @@ import vid4 from "./media/vid5.mp4";// Import the second video
 import vid5 from "./media/vid6.mp4";
 import vid6 from "./media/vid7.mp4";
 import vid7 from "./media/vid8.mp4";
-
+import { Link } from "react-router-dom";
 
 
 function VideoGallery() {
@@ -68,6 +68,8 @@ function VideoGallery() {
           </video>
         </div>
       </Slider>
+      <p>Now For The Best Part. Please click on the Next Button Baby❤️</p>
+      <Link to="/ValentinePage" className="button">EXCITEDDD!!!</Link>
     </div>
   );
 }
