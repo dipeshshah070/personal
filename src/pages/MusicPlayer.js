@@ -6,43 +6,44 @@ function MusicPlayer() {
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
 
-  const audio = useRef(new Audio(require("../media/song.mp3"))); // Path to your song file
+  const audioRef = useRef(new Audio(require("../media/song.mp3"))); // Path to your song file
 
-  // Enable looping
   useEffect(() => {
-    audio.current.loop = true;
+    const audio = audioRef.current; // Capture the current ref value
+    audio.loop = true;
 
     // Update duration and current time
-    const handleTimeUpdate = () => setCurrentTime(audio.current.currentTime);
-    const handleLoadedMetadata = () => setDuration(audio.current.duration);
+    const handleTimeUpdate = () => setCurrentTime(audio.currentTime);
+    const handleLoadedMetadata = () => setDuration(audio.duration);
 
-    audio.current.addEventListener("timeupdate", handleTimeUpdate);
-    audio.current.addEventListener("loadedmetadata", handleLoadedMetadata);
+    audio.addEventListener("timeupdate", handleTimeUpdate);
+    audio.addEventListener("loadedmetadata", handleLoadedMetadata);
 
     return () => {
-      audio.current.removeEventListener("timeupdate", handleTimeUpdate);
-      audio.current.removeEventListener("loadedmetadata", handleLoadedMetadata);
+      // Cleanup: pause the audio and remove event listeners when unmounting
+      audio.pause();
+      audio.currentTime = 0; // Reset playback position
+      audio.removeEventListener("timeupdate", handleTimeUpdate);
+      audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
     };
-  }, []);
+  }, []); // Dependencies should be empty or only contain stable references
 
-  // Play or pause the audio
   const togglePlay = () => {
+    const audio = audioRef.current; // Always access the current ref value
     if (isPlaying) {
-      audio.current.pause();
+      audio.pause();
     } else {
-      audio.current.play();
+      audio.play();
     }
     setIsPlaying(!isPlaying);
   };
 
-  // Set volume
   const handleVolumeChange = (event) => {
     const newVolume = event.target.value / 100;
-    audio.current.volume = newVolume;
+    audioRef.current.volume = newVolume;
     setVolume(newVolume * 100);
   };
 
-  // Format time (e.g., 01:23)
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);

@@ -14,6 +14,7 @@ import img9 from "./media/img9.jpg";
 import img10 from "./media/img10.jpg";
 import { Link } from "react-router-dom";
 
+
 function PhotoSlideshow() {
   const settings = {
     dots: true,
@@ -60,6 +61,7 @@ function PhotoSlideshow() {
       </Slider>
       <p></p>
       <Link to="/videos" className="button">Videossssssss</Link>
+      <p> If you are bored sliding you can play the song</p>
     </div>
   );
 }
