@@ -1,9 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import gifAnimation from "../media/animation.gif";
 function Home() {
   return (
     <div className="page">
+      <img
+        src={gifAnimation}
+        alt="Valentine Animation"
+      />
       <h1>Welcome, My Love! 💖</h1>
       <p>Click the buttons below to explore your surprise!</p>
       <Link to="/message1" className="button">Letss Goooo!!</Link>
