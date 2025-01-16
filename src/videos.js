@@ -9,6 +9,8 @@ import vid4 from "./media/vid5.mp4";// Import the second video
 import vid5 from "./media/vid6.mp4";
 import vid6 from "./media/vid7.mp4";
 import vid7 from "./media/vid8.mp4";
+import vid8 from "./media/vid9.mp4";
+import vid9 from "./media/vid10.mp4";
 import { Link } from "react-router-dom";
 
 
@@ -64,6 +66,18 @@ function VideoGallery() {
         <div>
           <video controls className="video-player">
             <source src={vid7} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div>
+          <video controls className="video-player">
+            <source src={vid8} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+        <div>
+          <video controls className="video-player">
+            <source src={vid9} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

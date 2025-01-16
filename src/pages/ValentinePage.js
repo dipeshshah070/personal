@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MusicPlayer from "./MusicPlayer"; // Importing the MusicPlayer component
+import { Link } from "react-router-dom";
 
 function ValentinePage() {
   const [scale, setScale] = useState(0.5);
@@ -41,6 +42,8 @@ function ValentinePage() {
       <div className="button-container">
         <button className="valentine-button yes-button" onClick={handleYes}>Yes 💕💕</button>
         <button className="valentine-button no-button" onClick={handleNo}>Of course 💕💕</button>
+        <p></p>
+        <Link to="/" className="button">Go Home</Link>
       </div>
     </div>
   );

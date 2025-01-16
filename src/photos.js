@@ -5,10 +5,10 @@ import "slick-carousel/slick/slick-theme.css";
 import img1 from "./media/img1.jpg";
 import img2 from "./media/img2.jpg";
 import img3 from "./media/img3.jpg";
-import img4 from "./media/img4.jpg";
+import img4 from "./media/img4.jpeg";
 import img5 from "./media/img5.jpg";
 import img6 from "./media/img6.jpg";
-import img7 from "./media/img7.jpg";
+// import img7 from "./media/img7.jpg";
 import img8 from "./media/img8.jpg";
 import img9 from "./media/img9.jpg";
 import img10 from "./media/img10.jpg";
@@ -47,9 +47,9 @@ function PhotoSlideshow() {
         <div>
           <img src={img6} alt="Memory 6" />
         </div>
-        <div>
+        {/* <div>
           <img src={img7} alt="Memory 7" />
-        </div>
+        </div> */}
         <div>
           <img src={img8} alt="Memory 8" />
         </div>
